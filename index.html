@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In Tents Outfitters | Mobile Camps, Kariba</title>
+<meta name="description" content="Fully equipped mobile camps delivered, set up and packed away anywhere you choose. Hunting, fishing, safaris and retreats. Based in Kariba, Zimbabwe.">
+<style>
+:root{
+  --green:#1f2a1c; --green2:#2f4228; --moss:#5f7a3c; --gold:#c9a24a; --sand:#efe6d3; --paper:#f8f3e8; --ink:#1b1b16; --terra:#b3562f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--paper);color:var(--ink);line-height:1.55;-webkit-text-size-adjust:100%}
+h1,h2,h3,.sans,button,nav,label,input,select,textarea{font-family:'Helvetica Neue',Arial,sans-serif}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{padding:0 20px;max-width:1040px;margin:0 auto}
+section{padding:56px 0}
+.eyebrow{font:600 12px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--moss);margin-bottom:12px}
+h2{font-size:clamp(28px,7vw,42px);line-height:1.08;letter-spacing:-.01em;color:var(--green);margin-bottom:14px;font-weight:800;text-transform:uppercase}
+p.lead{font-size:18px;max-width:640px}
+
+/* top bar */
+header{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:rgba(31,42,28,.92);backdrop-filter:blur(6px);color:#fff}
+.logo{font:800 14px/1.1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase}
+.logo small{display:block;font:italic 11px Georgia,serif;color:var(--gold);letter-spacing:0;text-transform:none}
+.hbtn{background:var(--gold);color:var(--green);text-decoration:none;font:700 13px 'Helvetica Neue',Arial,sans-serif;padding:9px 14px;border-radius:999px}
+
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:flex-end;position:relative;color:#fff;padding:90px 0 40px;
+  background:
+   linear-gradient(180deg,rgba(20,26,17,.35) 0%,rgba(20,26,17,.55) 45%,rgba(20,26,17,.92) 100%),
+   url('img/hero.jpg') center/cover,
+   radial-gradient(120% 80% at 70% 20%,#d98a3a 0%,#8a4a2a 30%,#2f4228 65%,#1f2a1c 100%)}
+.hero h1{font-size:clamp(44px,13vw,92px);line-height:.92;font-weight:900;text-transform:uppercase;letter-spacing:-.01em}
+.hero h1 span{display:block;color:var(--gold);font-size:.42em;letter-spacing:.18em;margin-top:10px}
+.hero p{font-size:19px;max-width:520px;margin:18px 0 24px;color:#f1ead9}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chips span{font:600 12px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(255,255,255,.4);padding:7px 11px;border-radius:999px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border-radius:12px;font:700 16px 'Helvetica Neue',Arial,sans-serif;text-decoration:none;border:0;cursor:pointer}
+.btn.wa{background:#25d366;color:#06240f}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6)}
+.btn.dark{background:var(--green);color:#fff}
+
+/* strip */
+.strip{background:var(--green);color:#fff;padding:28px 0}
+.strip .grid{display:grid;grid-template-columns:1fr;gap:18px}
+.strip h3{color:var(--gold);font-size:15px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.strip p{font-size:15px;color:#e8e0cc}
+
+/* uses */
+.uses{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.use{aspect-ratio:4/5;border-radius:14px;position:relative;overflow:hidden;color:#fff;display:flex;align-items:flex-end;padding:14px;font:800 15px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.use::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center}
+.use::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.75))}
+.use span{position:relative;z-index:1}
+.u1::before{background-image:url('img/fishing.jpg'),linear-gradient(160deg,#e59a43,#7c4a2a 60%,#2a3a2a)}
+.u2::before{background-image:url('img/hunting.jpg'),linear-gradient(160deg,#c9773a,#5a3524 60%,#1f2a1c)}
+.u3::before{background-image:url('img/safari.jpg'),linear-gradient(160deg,#e0a24a,#8a4a2a 55%,#2a2a1c)}
+.u4::before{background-image:url('img/retreat.jpg'),linear-gradient(160deg,#6b8a45,#3c5530 60%,#1f2a1c)}
+
+/* includes */
+.inc{background:var(--sand)}
+.inc-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:24px}
+.inc-card{background:#fff;border-radius:14px;padding:18px;display:flex;gap:14px;align-items:flex-start;border:1px solid #e3d8bd}
+.ico{flex:0 0 44px;height:44px;border-radius:50%;background:var(--green);color:var(--gold);display:grid;place-items:center;font-size:20px}
+.inc-card h3{font-size:16px;text-transform:uppercase;letter-spacing:.05em;color:var(--green);margin-bottom:2px}
+.inc-card p{font-size:15px}
+.callout{margin-top:22px;background:var(--green);color:#fff;border-radius:14px;padding:20px}
+.callout h3{color:var(--gold);text-transform:uppercase;letter-spacing:.05em;font-size:17px;margin-bottom:6px}
+.callout em{display:block;margin-top:8px;color:#cfd8b6}
+
+/* camps */
+.tabs{display:flex;gap:8px;margin:22px 0 16px;overflow-x:auto;padding-bottom:4px}
+.tab{flex:0 0 auto;padding:11px 16px;border-radius:999px;border:1.5px solid var(--green);background:transparent;color:var(--green);font-weight:700;font-size:14px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--green);color:#fff}
+.panel{display:none;background:#fff;border:1px solid #e3d8bd;border-radius:16px;overflow:hidden}
+.panel.on{display:block}
+.panel .ph{height:200px;background-size:cover;background-position:center}
+.panel .body{padding:20px}
+.panel h3{font-size:22px;color:var(--green);margin-bottom:6px}
+.panel ul{margin:12px 0 18px 18px}
+.panel li{margin:4px 0}
+.note{font:italic 13px Georgia,serif;color:#6b6552;margin-top:10px}
+.tag{display:inline-block;font:700 11px 'Helvetica Neue',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;background:var(--sand);padding:5px 9px;border-radius:6px;color:var(--green);margin-bottom:8px}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:22px}
+.gal button{border:0;padding:0;aspect-ratio:1;border-radius:12px;background-size:cover;background-position:center;cursor:pointer;position:relative;overflow:hidden}
+.gal button.wide{grid-column:span 2;aspect-ratio:16/9}
+.gal button span{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.6);color:#fff;font:12px 'Helvetica Neue',Arial,sans-serif;padding:4px 8px;border-radius:6px}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:50;display:none;align-items:center;justify-content:center;flex-direction:column;color:#fff;padding:16px}
+.lb.on{display:flex}
+.lb .img{width:100%;max-width:900px;aspect-ratio:4/3;background-size:contain;background-position:center;background-repeat:no-repeat;border-radius:10px}
+.lb .bar{display:flex;gap:10px;margin-top:14px}
+.lb button{background:#333;color:#fff;border:0;border-radius:10px;padding:12px 18px;font-size:16px;cursor:pointer}
+
+/* faq */
+details{background:#fff;border:1px solid #e3d8bd;border-radius:12px;margin-bottom:10px;padding:0 16px}
+summary{padding:16px 0;font:700 16px 'Helvetica Neue',Arial,sans-serif;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;color:var(--green)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;color:var(--moss);line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 16px;font-size:16px}
+
+/* contact */
+.contact{background:var(--green);color:#fff}
+.contact h2{color:#fff}
+.contact .eyebrow{color:var(--gold)}
+form{display:grid;gap:12px;margin-top:20px}
+label{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#d8d2bd}
+input,select,textarea{width:100%;padding:14px;border-radius:10px;border:0;font-size:16px;margin-top:6px;background:#fff;color:var(--ink)}
+.row{display:grid;grid-template-columns:1fr;gap:12px}
+.alt{margin-top:18px;font-size:15px;color:#d8d2bd}
+.alt a{color:var(--gold)}
+
+footer{background:#141a11;color:#b9b39e;padding:30px 0 110px;font:14px 'Helvetica Neue',Arial,sans-serif}
+footer a{color:#e8e0cc}
+footer .tl{font:italic 16px Georgia,serif;color:var(--gold);margin-bottom:10px}
+
+/* sticky whatsapp */
+.fab{position:fixed;right:16px;bottom:16px;z-index:40;display:flex;align-items:center;gap:10px;background:#25d366;color:#06240f;text-decoration:none;font:700 15px 'Helvetica Neue',Arial,sans-serif;padding:14px 18px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.fab svg{width:24px;height:24px}
+
+@media(min-width:720px){
+  .strip .grid{grid-template-columns:repeat(3,1fr)}
+  .uses{grid-template-columns:repeat(4,1fr)}
+  .inc-grid{grid-template-columns:1fr 1fr}
+  .panel.on{display:grid;grid-template-columns:1fr 1fr}
+  .panel .ph{height:100%;min-height:280px}
+  .gal{grid-template-columns:repeat(4,1fr)}
+  .gal button.wide{grid-column:span 2;aspect-ratio:auto}
+  .row{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">"In Tents" Outfitters<small>It's intense!</small></div>
+  <a class="hbtn" href="#enquire">Enquire</a>
+</header>
+
+<main>
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <h1>Mobile camps<span>for the wild</span></h1>
+    <p>Fully equipped tents with proper beds, linen and a private en-suite, delivered, set up and packed away wherever your adventure takes you.</p>
+    <div class="chips"><span>Hunting</span><span>Fishing</span><span>Safaris</span><span>Retreats</span></div>
+    <div class="cta">
+      <a class="btn wa" href="https://wa.me/263772853586?text=Hi%20In%20Tents%20Outfitters%2C%20I%27d%20like%20to%20book%20a%20camp." target="_blank" rel="noopener">WhatsApp to book your camp</a>
+      <a class="btn ghost" href="#camps">See the camps</a>
+    </div>
+  </div>
+</div>
+
+<!-- VALUE STRIP -->
+<div class="strip"><div class="wrap grid">
+  <div><h3>Fully equipped</h3><p>Spacious tents with comfortable beds and linen.</p></div>
+  <div><h3>Complete setup</h3><p>Everything you need, delivered and ready to go.</p></div>
+  <div><h3>We handle it all</h3><p>Delivered, set up and collected. You relax, we do the rest.</p></div>
+</div></div>
+
+<!-- USES -->
+<section id="uses"><div class="wrap">
+  <div class="eyebrow">Camp anywhere</div>
+  <h2>Comfort in the wild</h2>
+  <p class="lead">Whether it's a river, a hunting concession or a family bush weekend near Kariba, the camp comes to you.</p>
+  <div class="uses">
+    <div class="use u1"><span>Fishing trips</span></div>
+    <div class="use u2"><span>Hunting safaris</span></div>
+    <div class="use u3"><span>Safari adventures</span></div>
+    <div class="use u4"><span>Bush retreats</span></div>
+  </div>
+</div></section>
+
+<!-- INCLUDES -->
+<section class="inc" id="includes"><div class="wrap">
+  <div class="eyebrow">Every camp includes</div>
+  <h2>Camping, made easy</h2>
+  <div class="inc-grid">
+    <div class="inc-card"><div class="ico">&#9790;</div><div><h3>Comfortable beds &amp; linen</h3><p>Rest well after your adventure.</p></div></div>
+    <div class="inc-card"><div class="ico">&#9832;</div><div><h3>Private en-suite</h3><p>Shower and toilet right at your camp.</p></div></div>
+    <div class="inc-card"><div class="ico">&#9881;</div><div><h3>Complete setup</h3><p>We deliver, set up and pack up.</p></div></div>
+    <div class="inc-card"><div class="ico">&#9906;</div><div><h3>Go anywhere</h3><p>We bring the camp to your chosen location.</p></div></div>
+  </div>
+  <div class="callout">
+    <h3>No midnight walks, no torches needed</h3>
+    <p>Your private en-suite bathroom is right where you need it. Just relax and enjoy the bush.</p>
+  </div>
+</div></section>
+
+<!-- CAMPS -->
+<section id="camps"><div class="wrap">
+  <div class="eyebrow">The camps</div>
+  <h2>What arrives at your site</h2>
+  <p class="lead">Pick a set-up to see what's included, then ask for a quote for your dates and location.</p>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-t="p1">Twin tent</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="p2">Dining &amp; kitchen</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="p3">Group camp</button>
+  </div>
+
+  <div class="panel on" id="p1">
+    <div class="ph" style="background-image:url('img/twin-tent.jpg'),linear-gradient(160deg,#4a5a3a,#1f2a1c)"></div>
+    <div class="body">
+      <span class="tag">Sleeping</span>
+      <h3>Twin-bed en-suite tent</h3>
+      <p>A spacious canvas tent with two beds, linen, and a private bathroom attached.</p>
+      <ul><li>Comfortable beds with linen and blankets</li><li>Private en-suite with toilet and shower</li><li>Chairs for the tent front</li></ul>
+      <a class="btn dark" href="#enquire" data-pick="Twin tent">Ask for a quote</a>
+      <p class="note">Pricing on request. Final inclusions confirmed when you enquire.</p>
+    </div>
+  </div>
+  <div class="panel" id="p2">
+    <div class="ph" style="background-image:url('img/dining.jpg'),linear-gradient(160deg,#5b6b4a,#1f2a1c)"></div>
+    <div class="body">
+      <span class="tag">Eating</span>
+      <h3>Dining shelter &amp; kitchen</h3>
+      <p>A shaded dining area with tables and chairs, plus a working camp kitchen so your group can eat well in the bush.</p>
+      <ul><li>Dining shelter with tables and chairs</li><li>Camp kitchen set-up</li></ul>
+      <a class="btn dark" href="#enquire" data-pick="Dining & kitchen">Ask for a quote</a>
+      <p class="note">Pricing on request. Final inclusions confirmed when you enquire.</p>
+    </div>
+  </div>
+  <div class="panel" id="p3">
+    <div class="ph" style="background-image:url('img/group.jpg'),linear-gradient(160deg,#6a7a4a,#2a3a22)"></div>
+    <div class="body">
+      <span class="tag">Groups &amp; events</span>
+      <h3>Full group camp</h3>
+      <p>Several tents plus a central dining shelter, set up as one camp for families, hunting parties, fishing groups or extra guest accommodation.</p>
+      <ul><li>Multiple tents sized to your group</li><li>Central dining shelter</li><li>Delivery, set-up and collection</li></ul>
+      <a class="btn dark" href="#enquire" data-pick="Group camp">Ask for a quote</a>
+      <p class="note">Pricing on request. Final inclusions confirmed when you enquire.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- GALLERY -->
+<section id="gallery" style="background:var(--sand)"><div class="wrap">
+  <div class="eyebrow">Gallery</div>
+  <h2>See it on the ground</h2>
+  <div class="gal" id="gal">
+    <button class="wide" data-i="0" style="background-image:url('img/gallery-1.jpg'),linear-gradient(160deg,#6a7a4a,#1f2a1c)"><span>Camp under the trees</span></button>
+    <button data-i="1" style="background-image:url('img/gallery-2.jpg'),linear-gradient(160deg,#8a6a4a,#2a1f1c)"><span>Twin tent</span></button>
+    <button data-i="2" style="background-image:url('img/gallery-3.jpg'),linear-gradient(160deg,#4a6a6a,#1c2a2a)"><span>En-suite</span></button>
+    <button data-i="3" style="background-image:url('img/gallery-4.jpg'),linear-gradient(160deg,#6a5a3a,#2a2318)"><span>Camp kitchen</span></button>
+    <button data-i="4" style="background-image:url('img/gallery-5.jpg'),linear-gradient(160deg,#3a6a7a,#1c2a2f)"><span>Lakeside dining</span></button>
+  </div>
+  <p class="note">Swap in the original photos from the folder <code>img/</code> (see README note in the message).</p>
+</div></section>
+
+<!-- FAQ -->
+<section id="faq"><div class="wrap">
+  <div class="eyebrow">Questions</div>
+  <h2>Before you book</h2>
+  <details><summary>What do I actually get?</summary><p>A fully equipped camp: spacious tents with comfortable beds and linen, a private en-suite at the camp, and everything set up and ready when you arrive.</p></details>
+  <details><summary>Who sets it up and packs it away?</summary><p>We do. The camp is delivered, set up, and collected afterwards. You just enjoy the bush.</p></details>
+  <details><summary>Where can you set up?</summary><p>Anywhere you choose. We're based in Kariba and work around the lake and the surrounding bush. Tell us your location when you enquire.</p></details>
+  <details><summary>What can I use a camp for?</summary><p>Hunting, fishing trips, safaris, bush retreats, and extra accommodation for family and friends.</p></details>
+  <details><summary>How do I get a price and check dates?</summary><p>Send us your dates, group size and location on WhatsApp or through the form below. We'll come back with availability and a quote.</p></details>
+</div></section>
+
+<!-- CONTACT -->
+<section class="contact" id="enquire"><div class="wrap">
+  <div class="eyebrow">Enquire</div>
+  <h2>Book your camp</h2>
+  <p class="lead">Tell us when, where and how many. This opens WhatsApp with your details filled in, so you reach us straight away.</p>
+  <form id="f">
+    <div class="row">
+      <div><label for="n">Your name</label><input id="n" autocomplete="name" required></div>
+      <div><label for="t">Type of trip</label>
+        <select id="t"><option>Fishing</option><option>Hunting</option><option>Safari</option><option>Bush retreat</option><option>Family / extra accommodation</option><option>Other</option></select></div>
+    </div>
+    <div class="row">
+      <div><label for="d">Dates</label><input id="d" placeholder="e.g. 12 to 15 Dec"></div>
+      <div><label for="g">Group size</label><input id="g" inputmode="numeric" placeholder="Number of people"></div>
+    </div>
+    <div><label for="l">Camp location</label><input id="l" placeholder="Where should we set up?"></div>
+    <div><label for="s">Set-up</label>
+      <select id="s"><option>Not sure yet</option><option>Twin tent</option><option>Dining & kitchen</option><option>Group camp</option></select></div>
+    <button class="btn wa" type="submit">Send on WhatsApp</button>
+  </form>
+  <p class="alt">Prefer to call or message? WhatsApp <a href="https://wa.me/263772853586">+263 772 853 586</a> or reach us on <a href="https://www.instagram.com/in_tents_outfitters" target="_blank" rel="noopener">Instagram</a> and Facebook.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="tl">Comfort in the wild. Anywhere you go.</div>
+  <p>"In Tents" Outfitters · Kariba, Zimbabwe · Temporary camp and fly-camp hire specialists</p>
+  <p style="margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&query=Kariba+Zimbabwe" target="_blank" rel="noopener">Find us in Kariba</a> · <a href="https://www.instagram.com/in_tents_outfitters" target="_blank" rel="noopener">@in_tents_outfitters</a></p>
+</div></footer>
+
+<a class="fab" href="https://wa.me/263772853586?text=Hi%20In%20Tents%20Outfitters%2C%20I%27d%20like%20to%20book%20a%20camp." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.3.7 4.5 1.9 6.3L4 29l8-1.8c1.2.5 2.6.8 4 .8 6.6 0 12-5.300 12-11.900C28 8.300 22.600 3 16 3zm0 21.700c-1.300 0-2.500-.3-3.600-.9l-.5-.3-4.700 1 1-4.500-.3-.5a9.600 9.600 0 0 1-1.500-5.200C6.400 9.900 10.700 5.600 16 5.600s9.600 4.300 9.600 9.600-4.300 9.500-9.600 9.500zm5.300-7.200c-.3-.1-1.700-.8-2-.9-.3-.1-.5-.1-.7.100-.2.300-.8.900-.9 1.100-.2.200-.3.200-.6.100-1.700-.8-2.800-1.500-3.900-3.400-.3-.5.300-.5.800-1.500.1-.2 0-.4 0-.5l-.9-2.100c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.500s1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.500 1.900.8 2.700.9 3.600.7.600-.1 1.700-.7 2-1.400.2-.7.200-1.300.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>
+  WhatsApp
+</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="img" id="lbi"></div>
+  <div class="bar"><button id="pv">Prev</button><button id="nx">Next</button><button id="cl">Close</button></div>
+</div>
+
+<script>
+// Tabs
+document.querySelectorAll('.tab').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected','false')});
+    document.querySelectorAll('.panel').forEach(function(x){x.classList.remove('on')});
+    b.setAttribute('aria-selected','true');
+    document.getElementById(b.dataset.t).classList.add('on');
+  });
+});
+// Preselect set-up from quote buttons
+document.querySelectorAll('[data-pick]').forEach(function(a){
+  a.addEventListener('click',function(){
+    var s=document.getElementById('s');
+    for(var i=0;i<s.options.length;i++){ if(s.options[i].text===a.dataset.pick){s.selectedIndex=i;} }
+  });
+});
+// Lightbox
+var items=[].slice.call(document.querySelectorAll('#gal button')),cur=0,lb=document.getElementById('lb'),lbi=document.getElementById('lbi');
+function show(i){cur=(i+items.length)%items.length;lbi.style.backgroundImage=items[cur].style.backgroundImage;lb.classList.add('on')}
+items.forEach(function(b,i){b.addEventListener('click',function(){show(i)})});
+document.getElementById('pv').onclick=function(){show(cur-1)};
+document.getElementById('nx').onclick=function(){show(cur+1)};
+document.getElementById('cl').onclick=function(){lb.classList.remove('on')};
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1)});
+// Form -> WhatsApp
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var v=function(id){return document.getElementById(id).value.trim()||'not sure yet'};
+  var msg='Hi In Tents Outfitters, I\'d like to enquire about a camp.\n'+
+    'Name: '+v('n')+'\nTrip: '+v('t')+'\nDates: '+v('d')+'\nGroup size: '+v('g')+'\nLocation: '+v('l')+'\nSet-up: '+v('s');
+  window.open('https://wa.me/263772853586?text='+encodeURIComponent(msg),'_blank');
+});
+</script>
+</body>
+</html>
